@@ -1,0 +1,63 @@
+[gd_scene load_steps=4 format=3 uid="uid://dh3cxx0pen7a1"]
+
+[ext_resource type="Script" path="res://Balloon Popper/BalloonManager.gd" id="1_godcs"]
+[ext_resource type="PackedScene" uid="uid://ntxf2yiqxf42" path="res://Balloon Popper/Balloon.tscn" id="2_o484h"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_pip0l"]
+font_size = 28
+
+[node name="Main" type="Node3D" node_paths=PackedStringArray("score_text")]
+script = ExtResource("1_godcs")
+score_text = NodePath("Score Text")
+
+[node name="Balloon" parent="." instance=ExtResource("2_o484h")]
+clicks_to_pop = 1
+
+[node name="Balloon2" parent="." instance=ExtResource("2_o484h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.48906, 0)
+clicks_to_pop = 4
+score_to_give = 4
+
+[node name="Balloon3" parent="." instance=ExtResource("2_o484h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.69766, 0.655179, 0.644496)
+clicks_to_pop = 3
+score_to_give = 3
+
+[node name="Balloon4" parent="." instance=ExtResource("2_o484h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.08961, -0.518178, 0.47146)
+clicks_to_pop = 8
+score_to_give = 8
+
+[node name="Balloon5" parent="." instance=ExtResource("2_o484h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.214, -0.661149, 0.362957)
+score_to_give = 5
+
+[node name="Balloon6" parent="." instance=ExtResource("2_o484h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.78339, 0.487961, 0.80417)
+clicks_to_pop = 3
+score_to_give = 3
+
+[node name="Balloon7" parent="." instance=ExtResource("2_o484h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.02433, 0.761471, 0)
+clicks_to_pop = 10
+score_to_give = 10
+
+[node name="Balloon8" parent="." instance=ExtResource("2_o484h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.08971, 0.761471, 0)
+clicks_to_pop = 4
+score_to_give = 4
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00334603, 2.87377)
+current = true
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.75893, -0.33917, 0.555867, -2.81949e-08, 0.853642, 0.520861, -0.651172, -0.395297, 0.647855, 0.813391, 2.64498, 0.11061)
+
+[node name="Score Text" type="Label" parent="."]
+offset_left = 12.0
+offset_top = 9.0
+offset_right = 150.0
+offset_bottom = 47.0
+text = "Score: 0"
+label_settings = SubResource("LabelSettings_pip0l")
